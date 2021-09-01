@@ -1,0 +1,49 @@
+{
+  "name": "numparse",
+  "version": "0.0.1",
+  "description": "Easily parse numbers from text",
+  "main": "index.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "engineStrict": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zbo14/numparse.git"
+  },
+  "scripts": {
+    "docs": "jsdoc README.md index.js",
+    "lint": "eslint index.js test/index.js",
+    "test": "NODE_ENV=test nyc mocha test/index.js --exit"
+  },
+  "keywords": [
+    "regex",
+    "regular expression",
+    "numbers"
+  ],
+  "author": "Zachary Balder",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "jsdoc": "^3.6.7",
+    "mocha": "^9.1.1",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "reporter": [
+      "html",
+      "text"
+    ]
+  }
+}
